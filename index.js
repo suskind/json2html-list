@@ -144,9 +144,12 @@ function JSON2HTMLList(json, options) {
 
 }
 
-
-if(!('JSON2HTMLList' in window)) {
-    window.JSON2HTMLList = JSON2HTMLList; 
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = JSON2HTMLList;
+} else {
+    if(!('JSON2HTMLList' in window)) {
+        window.JSON2HTMLList = JSON2HTMLList; 
+    }
 }
 
 
