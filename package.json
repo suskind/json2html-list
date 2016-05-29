@@ -1,0 +1,19 @@
+{
+  "name": "json2html-list",
+  "version": "1.0.0",
+  "description": "Converts JSON to HTML UL-LI list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suskind/json2html-list.git"
+  },
+  "author": "Claudio Gamboa <gamboa@pdvel.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suskind/json2html-list/issues"
+  },
+  "homepage": "https://github.com/suskind/json2html-list#readme"
+}

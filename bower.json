@@ -1,0 +1,17 @@
+{
+  "name": "json2html-list",
+  "description": "Converts JSON to HTML UL-LI list",
+  "main": "index.js",
+  "authors": [
+    "Claudio Gamboa <gamboa@pdvel.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/suskind/json2html-list",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>JSON2HTMLList - sample</title>
+
+<style type="text/css">
+strong {
+    margin-right: 5px;
+}
+strong:after {
+    content: ':';
+}
+</style>
+
+</head>
+<body>
+
+<h1>Converts JSON to HTML List</h1>
+
+<h2>Input</h2>
+<pre id="input">
+</pre>
+<h2>Output</h2>
+<div id="output">
+</div>
+
+
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript">
+
+(function() {
+
+var myJSON = {
+    "glossary": {
+        "title": "example glossary",
+        "GlossDiv": {
+            "title": "S",
+            "GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+                    "SortAs": "SGML",
+                    "GlossTerm": "Standard Generalized Markup Language",
+                    "Acronym": "SGML",
+                    "Abbrev": "ISO 8879:1986",
+                    "GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+                        "GlossSeeAlso": ["GML", "XML"]
+                    },
+                    "GlossSee": "markup"
+                }
+            }
+        }
+    }
+};
+
+document.getElementById('input').appendChild(document.createTextNode(JSON.stringify(myJSON, null, 4)));
+
+document.getElementById('output').appendChild(JSON2HTMLList(myJSON));
+
+})();
+
+</script>
+
+</body>
+</html>
