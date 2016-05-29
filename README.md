@@ -1,6 +1,27 @@
 # json2html-list
 Converts JSON to HTML UL-LI list
 
+## Install 
+
+### Bower 
+```bash
+bower install --save json2html-list 
+```
+
+```html
+<script src="./bower_components/json2html-list/index.js"></script>
+```
+
+### Npm
+```bash
+npm install --save json2html-list
+```
+
+```js
+var JSON2HTMLList = require('json2html-list');
+```
+
+
 ## How To: 
 
 ```html
@@ -31,12 +52,12 @@ document.getElementById('output').appendChild(html);
 ```
 
 ## Options 
- * _container:_ (default: _div_) tag name to list container, this container will be returned
- * _formatContainer:_ function to format container element. Will receive container element as parameter 
- * _formatUl:_ function to format each UL element. Will receive UL elements as parameter 
- * _formatLi:_ function to format each LI element. Will receive LI elements as parameter 
- * _formatProperty:_ function to format each found object property. Will receive a object property as text node 
- * _formatValue:_ function to format each object or array value. Will receive the value as text node and the correspondent property (if array will receive array index)
+ * *container:* (default: *div*) tag name to list container, this container will be returned
+ * *formatContainer:* function to format container element. Will receive container element as parameter 
+ * *formatUl:* function to format each UL element. Will receive UL elements as parameter 
+ * *formatLi:* function to format each LI element. Will receive LI elements as parameter 
+ * *formatProperty:* function to format each found object property. Will receive a object property as text node 
+ * *formatValue:* function to format each object or array value. Will receive the value as text node and the correspondent property (if array will receive array index)
 
 ## How To with Options: 
 
