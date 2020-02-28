@@ -10,9 +10,19 @@ function formatContainer(container) {
     return container;
 }
 /**
+ * Formats Root UL element - can be overwritten in options
+ * @param: UL element
+ * @return: formatted UL element 
+ */
+function formatRootUl(ul) {
+    ul.className += ' ul-root-item';
+    return ul;
+}
+
+/**
  * Formats UL element - can be overwritten in options
  * @param: UL element
- * @return: formatted LI element 
+ * @return: formatted UL element 
  */
 function formatUl(ul) {
     ul.className = 'ul-item';
@@ -60,7 +70,8 @@ var _options = {
     formatUl: formatUl,
     formatLi: formatLi,
     formatProperty: formatProperty,
-    formatValue: formatValue
+    formatValue: formatValue,
+    formatRootUl:formatRootUl
 };
 
 function JSON2HTMLList(json, options) {
@@ -137,8 +148,13 @@ function JSON2HTMLList(json, options) {
         }
     }
 
-
+    
     walk(json, container);
+    
+    if(container.children.length > 0){
+        container.children[0] = _options.formatRootUl(container.children[0])
+    }
+
 
     return container;
 
