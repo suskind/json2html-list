@@ -32,6 +32,17 @@ strong:after {
 
 (function() {
 
+    var options = {       
+        formatUl: function(ul) {
+            ul.className = 'my-ul-class';
+            return ul;
+        },
+        formatRootUl:function(ul){
+            ul.className = ul.className+" ul-root"
+            return ul;
+        }
+    }
+
 var myJSON = {
     "glossary": {
         "title": "example glossary",
@@ -57,7 +68,7 @@ var myJSON = {
 
 document.getElementById('input').appendChild(document.createTextNode(JSON.stringify(myJSON, null, 4)));
 
-document.getElementById('output').appendChild(JSON2HTMLList(myJSON));
+document.getElementById('output').appendChild(JSON2HTMLList(myJSON, options));
 
 })();
 
